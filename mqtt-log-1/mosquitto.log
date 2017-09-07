@@ -1,0 +1,75 @@
+1504218118: mosquitto version 1.4.14 (build date Mon, 10 Jul 2017 23:48:43 +0100) starting
+1504218118: Config loaded from /mqtt/config/mosquitto.conf.
+1504218118: Opening websockets listen socket on port 9001.
+1504218118: Opening ipv4 listen socket on port 1883.
+1504218118: Opening ipv6 listen socket on port 1883.
+1504218951: mosquitto version 1.4.14 terminating
+1504219126: mosquitto version 1.4.14 (build date Mon, 10 Jul 2017 23:48:43 +0100) starting
+1504219126: Config loaded from /mqtt/config/mosquitto.conf.
+1504219126: Opening websockets listen socket on port 9001.
+1504219126: Opening ipv4 listen socket on port 1883.
+1504219126: Opening ipv6 listen socket on port 1883.
+1504219377: mosquitto version 1.4.14 terminating
+1504219410: mosquitto version 1.4.14 (build date Mon, 10 Jul 2017 23:48:43 +0100) starting
+1504219410: Config loaded from /mqtt/config/mosquitto.conf.
+1504219410: Opening websockets listen socket on port 9001.
+1504219410: Opening ipv4 listen socket on port 1883.
+1504219410: Opening ipv6 listen socket on port 1883.
+1504355324: Saving in-memory database to /mqtt/data/mosquitto.db.
+1504559530: mosquitto version 1.4.14 (build date Mon, 10 Jul 2017 23:48:43 +0100) starting
+1504559530: Config loaded from /mqtt/config/mosquitto.conf.
+1504559530: Opening websockets listen socket on port 9001.
+1504559530: Opening ipv4 listen socket on port 1883.
+1504559530: Opening ipv6 listen socket on port 1883.
+1504559645: mosquitto version 1.4.14 terminating
+1504559740: mosquitto version 1.4.14 (build date Mon, 10 Jul 2017 23:48:43 +0100) starting
+1504559740: Config loaded from /mqtt/config/mosquitto.conf.
+1504559740: Opening websockets listen socket on port 9001.
+1504559740: Opening ipv4 listen socket on port 1883.
+1504559740: Opening ipv6 listen socket on port 1883.
+1504559876: mosquitto version 1.4.14 terminating
+1504560023: mosquitto version 1.4.14 (build date Mon, 10 Jul 2017 23:48:43 +0100) starting
+1504560372: mosquitto version 1.4.14 (build date Mon, 10 Jul 2017 23:48:43 +0100) starting
+1504560372: Config loaded from /mqtt/config/mosquitto.conf.
+1504560372: Opening websockets listen socket on port 9001.
+1504560372: Opening ipv4 listen socket on port 1883.
+1504560372: Opening ipv6 listen socket on port 1883.
+1504560919: mosquitto version 1.4.14 terminating
+1504560991: mosquitto version 1.4.14 (build date Mon, 10 Jul 2017 23:48:43 +0100) starting
+1504560991: Config loaded from /mqtt/config/mosquitto.conf.
+1504560991: Opening websockets listen socket on port 9001.
+1504560991: Opening ipv4 listen socket on port 1883.
+1504560991: Opening ipv6 listen socket on port 1883.
+1504561374: mosquitto version 1.4.14 terminating
+1504561406: mosquitto version 1.4.14 (build date Mon, 10 Jul 2017 23:48:43 +0100) starting
+1504561406: Config loaded from /mqtt/config/mosquitto.conf.
+1504561406: Opening websockets listen socket on port 9001.
+1504561406: Opening ipv4 listen socket on port 1883.
+1504561406: Opening ipv6 listen socket on port 1883.
+1504563987: Saving in-memory database to /mqtt/data/mosquitto.db.
+1504569380: Saving in-memory database to /mqtt/data/mosquitto.db.
+1504632051: Saving in-memory database to /mqtt/data/mosquitto.db.
+1504633980: Saving in-memory database to /mqtt/data/mosquitto.db.
+1504636465: Saving in-memory database to /mqtt/data/mosquitto.db.
+1504639028: Saving in-memory database to /mqtt/data/mosquitto.db.
+1504640829: Saving in-memory database to /mqtt/data/mosquitto.db.
+1504643448: Saving in-memory database to /mqtt/data/mosquitto.db.
+1504645599: Saving in-memory database to /mqtt/data/mosquitto.db.
+1504647401: Saving in-memory database to /mqtt/data/mosquitto.db.
+1504667162: Saving in-memory database to /mqtt/data/mosquitto.db.
+1504690156: Saving in-memory database to /mqtt/data/mosquitto.db.
+1504691957: Saving in-memory database to /mqtt/data/mosquitto.db.
+1504693758: Saving in-memory database to /mqtt/data/mosquitto.db.
+1504695559: Saving in-memory database to /mqtt/data/mosquitto.db.
+1504697360: Saving in-memory database to /mqtt/data/mosquitto.db.
+1504699161: Saving in-memory database to /mqtt/data/mosquitto.db.
+1504700962: Saving in-memory database to /mqtt/data/mosquitto.db.
+1504703897: Saving in-memory database to /mqtt/data/mosquitto.db.
+1504706013: Saving in-memory database to /mqtt/data/mosquitto.db.
+1504715763: Saving in-memory database to /mqtt/data/mosquitto.db.
+1504717565: Saving in-memory database to /mqtt/data/mosquitto.db.
+1504730414: Saving in-memory database to /mqtt/data/mosquitto.db.
+1504732215: Saving in-memory database to /mqtt/data/mosquitto.db.
+1504734016: Saving in-memory database to /mqtt/data/mosquitto.db.
+1504735817: Saving in-memory database to /mqtt/data/mosquitto.db.
+1504768259: mosquitto version 1.4.14 terminating
