@@ -73,3 +73,111 @@
 1504734016: Saving in-memory database to /mqtt/data/mosquitto.db.
 1504735817: Saving in-memory database to /mqtt/data/mosquitto.db.
 1504768259: mosquitto version 1.4.14 terminating
+1505165425: mosquitto version 1.4.14 (build date Mon, 10 Jul 2017 23:48:43 +0100) starting
+1505165427: mosquitto version 1.4.14 (build date Mon, 10 Jul 2017 23:48:43 +0100) starting
+1505165427: Config loaded from /mqtt/config/mosquitto.conf.
+1505165427: Opening websockets listen socket on port 9001.
+1505165427: Opening ipv4 listen socket on port 1883.
+1505165427: Opening ipv6 listen socket on port 1883.
+1505166206: mosquitto version 1.4.14 terminating
+1505165425: Config loaded from /mqtt/config/mosquitto.conf.
+1505165425: Opening websockets listen socket on port 9001.
+1505165425: Opening ipv4 listen socket on port 1883.
+1505165425: Opening ipv6 listen socket on port 1883.
+1505166206: mosquitto version 1.4.14 terminating
+1505166260: mosquitto version 1.4.14 (build date Mon, 10 Jul 2017 23:48:43 +0100) starting
+1505166261: mosquitto version 1.4.14 (build date Mon, 10 Jul 2017 23:48:43 +0100) starting
+1505166260: Config loaded from /mqtt/config/mosquitto.conf.
+1505166260: Opening websockets listen socket on port 9001.
+1505166260: Opening ipv4 listen socket on port 1883.
+1505166260: Opening ipv6 listen socket on port 1883.
+1505166409: mosquitto version 1.4.14 terminating
+1505166261: Config loaded from /mqtt/config/mosquitto.conf.
+1505166261: Opening websockets listen socket on port 9001.
+1505166261: Opening ipv4 listen socket on port 1883.
+1505166261: Opening ipv6 listen socket on port 1883.
+1505166409: mosquitto version 1.4.14 terminating
+1505166455: mosquitto version 1.4.14 (build date Mon, 10 Jul 2017 23:48:43 +0100) starting
+1505166455: mosquitto version 1.4.14 (build date Mon, 10 Jul 2017 23:48:43 +0100) starting
+1505166455: Config loaded from /mqtt/config/mosquitto.conf.
+1505166455: Opening websockets listen socket on port 9001.
+1505166455: Opening ipv4 listen socket on port 1883.
+1505166455: Opening ipv6 listen socket on port 1883.
+1505166603: mosquitto version 1.4.14 terminating
+1505166455: Config loaded from /mqtt/config/mosquitto.conf.
+1505166455: Opening websockets listen socket on port 9001.
+1505166455: Opening ipv4 listen socket on port 1883.
+1505166455: Opening ipv6 listen socket on port 1883.
+1505166603: mosquitto version 1.4.14 terminating
+1505166640: mosquitto version 1.4.14 (build date Mon, 10 Jul 2017 23:48:43 +0100) starting
+1505166642: mosquitto version 1.4.14 (build date Mon, 10 Jul 2017 23:48:43 +0100) starting
+1505166642: Config loaded from /mqtt/config/mosquitto.conf.
+1505166642: Opening websockets listen socket on port 9001.
+1505166642: Opening ipv4 listen socket on port 1883.
+1505166642: Opening ipv6 listen socket on port 1883.
+1505166964: mosquitto version 1.4.14 terminating
+1505166640: Config loaded from /mqtt/config/mosquitto.conf.
+1505166640: Opening websockets listen socket on port 9001.
+1505166640: Opening ipv4 listen socket on port 1883.
+1505166640: Opening ipv6 listen socket on port 1883.
+1505166964: mosquitto version 1.4.14 terminating
+1505167535: mosquitto version 1.4.14 (build date Mon, 10 Jul 2017 23:48:43 +0100) starting
+1505167536: mosquitto version 1.4.14 (build date Mon, 10 Jul 2017 23:48:43 +0100) starting
+1505167536: Config loaded from /mqtt/config/mosquitto.conf.
+1505167536: Opening websockets listen socket on port 9001.
+1505167536: Opening ipv4 listen socket on port 1883.
+1505167536: Opening ipv6 listen socket on port 1883.
+1505167770: mosquitto version 1.4.14 terminating
+1505167535: Config loaded from /mqtt/config/mosquitto.conf.
+1505167535: Opening websockets listen socket on port 9001.
+1505167535: Opening ipv4 listen socket on port 1883.
+1505167535: Opening ipv6 listen socket on port 1883.
+1505167770: mosquitto version 1.4.14 terminating
+1505167801: mosquitto version 1.4.14 (build date Mon, 10 Jul 2017 23:48:43 +0100) starting
+1505167801: mosquitto version 1.4.14 (build date Mon, 10 Jul 2017 23:48:43 +0100) starting
+1505167801: Config loaded from /mqtt/config/mosquitto.conf.
+1505167801: Opening websockets listen socket on port 9001.
+1505167801: Opening ipv4 listen socket on port 1883.
+1505167801: Opening ipv6 listen socket on port 1883.
+1505168688: mosquitto version 1.4.14 terminating
+1505167801: Config loaded from /mqtt/config/mosquitto.conf.
+1505167801: Opening websockets listen socket on port 9001.
+1505167801: Opening ipv4 listen socket on port 1883.
+1505167801: Opening ipv6 listen socket on port 1883.
+1505168688: mosquitto version 1.4.14 terminating
+1505168726: mosquitto version 1.4.14 (build date Mon, 10 Jul 2017 23:48:43 +0100) starting
+1505168727: mosquitto version 1.4.14 (build date Mon, 10 Jul 2017 23:48:43 +0100) starting
+1505168726: Config loaded from /mqtt/config/mosquitto.conf.
+1505168726: Opening websockets listen socket on port 9001.
+1505168726: Opening ipv4 listen socket on port 1883.
+1505168726: Opening ipv6 listen socket on port 1883.
+1505169121: mosquitto version 1.4.14 terminating
+1505168727: Config loaded from /mqtt/config/mosquitto.conf.
+1505168727: Opening websockets listen socket on port 9001.
+1505168728: Opening ipv4 listen socket on port 1883.
+1505168728: Opening ipv6 listen socket on port 1883.
+1505169121: mosquitto version 1.4.14 terminating
+1505169159: mosquitto version 1.4.14 (build date Mon, 10 Jul 2017 23:48:43 +0100) starting
+1505169159: mosquitto version 1.4.14 (build date Mon, 10 Jul 2017 23:48:43 +0100) starting
+1505169159: Config loaded from /mqtt/config/mosquitto.conf.
+1505169159: Opening websockets listen socket on port 9001.
+1505169159: Opening ipv4 listen socket on port 1883.
+1505169159: Opening ipv6 listen socket on port 1883.
+1505169636: mosquitto version 1.4.14 terminating
+1505169159: Config loaded from /mqtt/config/mosquitto.conf.
+1505169159: Opening websockets listen socket on port 9001.
+1505169159: Opening ipv4 listen socket on port 1883.
+1505169159: Opening ipv6 listen socket on port 1883.
+1505169636: mosquitto version 1.4.14 terminating
+1505169704: mosquitto version 1.4.14 (build date Mon, 10 Jul 2017 23:48:43 +0100) starting
+1505169704: mosquitto version 1.4.14 (build date Mon, 10 Jul 2017 23:48:43 +0100) starting
+1505169704: Config loaded from /mqtt/config/mosquitto.conf.
+1505169704: Opening websockets listen socket on port 9001.
+1505169704: Opening ipv4 listen socket on port 1883.
+1505169704: Opening ipv6 listen socket on port 1883.
+1505171165: mosquitto version 1.4.14 terminating
+1505169704: Config loaded from /mqtt/config/mosquitto.conf.
+1505169704: Opening websockets listen socket on port 9001.
+1505169704: Opening ipv4 listen socket on port 1883.
+1505169704: Opening ipv6 listen socket on port 1883.
+1505171165: mosquitto version 1.4.14 terminating
