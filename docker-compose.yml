@@ -41,6 +41,9 @@ services:
     ZK_HOSTS: zookeeper:2181
     APPLICATION_SECRET: hello-world
     KM_ARGS: -Djava.net.preferIPv4Stack=true
+  deploy:
+    placement:
+      constraints: [node.role == manager]
   networks:
     - overlay  
   
@@ -76,6 +79,9 @@ services:
     ports:
        - 1883
        # - 9001:9001
+    placement:
+      constraints: [node.role == manager]
+       
     networks:
       - overlay
    
