@@ -20,11 +20,11 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
       KAFKA_ADVERTISED_PROTOCOL_NAME: OUTSIDE
-      #KAFKA_ADVERTISED_PORT: 9094
+      KAFKA_ADVERTISED_PORT: 9094
       KAFKA_PROTOCOL_NAME: INSIDE
-      #KAFKA_PORT: 9092
+      KAFKA_PORT: 9092
     volumes:
-      - kafka_data:/kafka
+      - ./kafka_data:/kafka
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - overlay
@@ -33,13 +33,23 @@ services:
       restart_policy:
         condition: on-failure
 
-    
+ kafka-manager:
+  image: sheepkiller/kafka-manager:latest
+  ports:
+    - 9000
+  environment:
+    ZK_HOSTS: zookeeper:2181
+    APPLICATION_SECRET: hello-world
+    KM_ARGS: -Djava.net.preferIPv4Stack=true
+  networks:
+    - overlay  
+  
   mosquitto:
     image: toke/mosquitto
     volumes:
-      - mqtt_data:/mqtt/data
-      - mqtt_log:/mqtt/log
-      - mqtt_config:/mqtt/config
+      - ./mqtt_data:/mqtt/data
+      - ./mqtt_log:/mqtt/log
+      - ./mqtt_config:/mqtt/config
     ports:
        - 1883
     deploy:
@@ -73,7 +83,7 @@ services:
   cassandra:
     image: webscam/cassandra:3.11
     volumes:
-      - cassandra_data:/var/lib/cassandra
+      - ./cassandra_data:/var/lib/cassandra
     deploy:
       replicas: 3
       restart_policy:
@@ -181,12 +191,10 @@ networks:
 #    external:
 #       name: overlay-net
 
-volumes:
-  kafka_data:
-  mqtt_data:
-  mqtt_log:
-  mqtt_config:
-  cassandra_data:
+#volumes:
+#  mqtt_data:
+#  mqtt_log:
+#  mqtt_config:
 #    external:
 #      name: vol-cassandra1
   # cassandra2:
