@@ -23,8 +23,9 @@ services:
       KAFKA_ADVERTISED_PORT: 9094
       KAFKA_PROTOCOL_NAME: INSIDE
       KAFKA_PORT: 9092
+      KAFKA_HEAP_OPTS: "-Xmx512m -Xms256m"
     volumes:
-      - ./kafka_data:/kafka
+      - /var/iot/kafka_data:/kafka
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - overlay
@@ -45,51 +46,40 @@ services:
     placement:
       constraints: [node.role == manager]
   networks:
-    - overlay  
+    - overlay
   
   mosquitto:
     image: toke/mosquitto
     volumes:
-      - ./mqtt_data:/mqtt/data
-      - ./mqtt_log:/mqtt/log
-      - ./mqtt_config:/mqtt/config
+      - /var/iot/mqtt_data:/mqtt/data
+      - /var/iot/mqtt_log:/mqtt/log
+      - /var/iot/mqtt_config:/mqtt/config
     ports:
-       - 1883
+       - 1883:1883
     deploy:
-      replicas: 2
+      placement:
+        constraints: [node.role == manager]
+      replicas: 1
       restart_policy:
         condition: on-failure
 
     networks:
       - overlay  
   
-  # mosquitto-2:
-  #   image: toke/mosquitto
+  # haproxy:
+  #   image: haproxy:1.7
   #   volumes:
-  #     - ./mqtt-data-2:/mqtt/data
-  #     - ./mqtt-log-2:/mqtt/log
-  #     - ./mqtt-config-2:/mqtt/config
+  #     - /var/iot/haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
   #   ports:
   #      - 1883
- 
-  haproxy:
-    image: haproxy:1.7
-    volumes:
-      - ./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
-    ports:
-       - 1883
-       # - 9001:9001
-    placement:
-      constraints: [node.role == manager]
-       
-    networks:
-      - overlay
-   
-
+  #   placement:
+  #     constraints: [node.role == manager]
+  #   networks:
+  #     - overlay
   cassandra:
     image: webscam/cassandra:3.11
     volumes:
-      - ./cassandra_data:/var/lib/cassandra
+      - /var/iot/cassandra_data:/var/lib/cassandra
     deploy:
       replicas: 3
       restart_policy:
