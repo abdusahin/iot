@@ -1,54 +1,54 @@
 version: '3.2'
 services:
-  # zookeeper:
-  #   image: wurstmeister/zookeeper
-  #   ports:
-  #     - 2181
-  #   deploy:
-  #     replicas: 2
-  #     restart_policy:
-  #       condition: on-failure
+  zookeeper:
+    image: wurstmeister/zookeeper
+    ports:
+      - 2181
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: on-failure
 
-  #   networks:
-  #     - overlay  
-  # kafka:
-  #   image: wurstmeister/kafka:0.11.0.0
-  #   ports:
-  #     - 9092
-  #   environment:
-  #     HOSTNAME_COMMAND: "docker info | grep ^Name: | cut -d' ' -f 2"      
-  #     KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-  #     KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
-  #     KAFKA_ADVERTISED_PROTOCOL_NAME: OUTSIDE
-  #     KAFKA_ADVERTISED_PORT: 9094
-  #     KAFKA_PROTOCOL_NAME: INSIDE
-  #     KAFKA_PORT: 9092
-  #     KAFKA_HEAP_OPTS: "-Xmx512m -Xms256m"
-  #   volumes:
-  #     - /var/iot/kafka_data:/kafka
-  #     - /var/run/docker.sock:/var/run/docker.sock
-  #   networks:
-  #     - overlay
-  #   deploy:
-  #     placement:
-  #     constraints: [node.role == manager]
-  #     replicas: 2
-  #     restart_policy:
-  #       condition: on-failure
+    networks:
+      - overlay  
+  kafka:
+    image: wurstmeister/kafka:0.11.0.0
+    ports:
+      - 9092
+    environment:
+      HOSTNAME_COMMAND: "docker info | grep ^Name: | cut -d' ' -f 2"      
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
+      KAFKA_ADVERTISED_PROTOCOL_NAME: OUTSIDE
+      KAFKA_ADVERTISED_PORT: 9094
+      KAFKA_PROTOCOL_NAME: INSIDE
+      KAFKA_PORT: 9092
+      KAFKA_HEAP_OPTS: "-Xmx512m -Xms256m"
+    volumes:
+      - /var/iot/kafka_data:/kafka
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - overlay
+    deploy:
+      placement:
+      constraints: [node.role == manager]
+      replicas: 2
+      restart_policy:
+        condition: on-failure
 
-  # kafka-manager:
-  #   image: sheepkiller/kafka-manager:latest
-  #   ports:
-  #     - 9000:9000
-  #   environment:
-  #     ZK_HOSTS: zookeeper:2181
-  #     APPLICATION_SECRET: hello-world
-  #     KM_ARGS: -Djava.net.preferIPv4Stack=true
-  #   deploy:
-  #     placement:
-  #       constraints: [node.role == manager]
-  #   networks:
-  #     - overlay
+  kafka-manager:
+    image: sheepkiller/kafka-manager:latest
+    ports:
+      - 9000:9000
+    environment:
+      ZK_HOSTS: zookeeper:2181
+      APPLICATION_SECRET: hello-world
+      KM_ARGS: -Djava.net.preferIPv4Stack=true
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+    networks:
+      - overlay
   
   mosquitto:
     image: toke/mosquitto
@@ -78,24 +78,26 @@ services:
   #     constraints: [node.role == manager]
   #   networks:
   #     - overlay
-  # cassandra:
-  #   image: webscam/cassandra:3.11
-  #   volumes:
-  #     - /var/iot/cassandra_data:/var/lib/cassandra
-  #     - /var/iot/cassandra_config:/etc/cassandra"
-  #   environment:
-  #     HEAP_NEWSIZE: 12M
-  #     MAX_HEAP_SIZE: 512M  
-  #   deploy:
-  #     replicas: 3
-  #     restart_policy:
-  #       condition: on-failure
-  #       delay: 60s
-  #   networks:
-  #     - overlay
-  #   ports:
-  #     - 7000
-  #     - 9042
+  cassandra:
+    image: webscam/cassandra:3.11
+    volumes:
+      - /var/iot/cassandra_data:/var/lib/cassandra
+      - /var/iot/cassandra_config:/etc/cassandra"
+    environment:
+      HEAP_NEWSIZE: 12M
+      MAX_HEAP_SIZE: 512M  
+    deploy:
+      mode: global
+      constraints:
+        - node.labels.db == true
+      restart_policy:
+        condition: on-failure
+        delay: 60s
+    networks:
+      - overlay
+    ports:
+      - 7000
+      - 9042
   
   # cassandra-2:
   #   image: cassandra:3.11.0
@@ -166,25 +168,24 @@ services:
   #     - zoo1
   #     - zoo2
   #     - zoo3 
-  # tb:
-  #   image: "thingsboard/application:1.3.0"
-  #   ports:
-  #     - "8080:8080"
-  #     - "2883:2883"
-  #     - "5683:5683/udp"
-  #   env_file:
-  #     - tb.env
-  #   environment:
-  #     - ADD_SCHEMA_AND_SYSTEM_DATA=true
-  #     - ADD_DEMO_DATA=false
-  #   volumes:
-  #     - ./thingsboard_data:/usr/share/thingsboard/data/sql
-  #   entrypoint: /run-application.sh
-  #   links:
-  #     - cassandra-1
-  #     - cassandra-2
-  #     - cassandra-3
+  thingsboard:
+    image: "thingsboard/application:1.3.0"
+    ports:
+      - 8080:8080
+      - 2883
+      - 5683/udp
+    env_file:
+      - tb.env
+    environment:
+      - ADD_SCHEMA_AND_SYSTEM_DATA=${ADD_SCHEMA_AND_SYSTEM_DATA}
+      - ADD_DEMO_DATA=${ADD_DEMO_DATA}
+    volumes:
+      - ./thingsboard_data:/usr/share/thingsboard/data/sql
+    entrypoint: /run-application.sh
 
+thingsboard-gw:
+    image: "abdusahin/thingsboard-gateway:latest"
+    entrypoint: /run-application.sh
 
 networks:
   overlay:
