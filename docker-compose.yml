@@ -186,7 +186,17 @@ services:
 thingsboard-gw:
     image: "abdusahin/thingsboard-gateway:latest"
     entrypoint: /run-application.sh
-
+    environment:
+      - GATEWAY_HOST: thingsboard
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    networks:
+      - overlay
+        
 networks:
   overlay:
 #networks:
